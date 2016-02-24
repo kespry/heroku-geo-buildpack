@@ -122,4 +122,6 @@ set-default-env LIBRARY_PATH "$APP_VENDOR/lib"
 set-default-env LD_LIBRARY_PATH "$APP_VENDOR/lib"
 set-default-env CPATH "$APP_VENDOR/include"
 
+find $APP_VENDOR
+
 echo "-----> Vendoring geo libraries done"
