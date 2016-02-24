@@ -93,6 +93,8 @@ TARGET_VENDOR_DIR=".heroku/vendor"
 for dir in $VENDORED_GEOS $VENDORED_GDAL $VENDORED_PROJ; do
   mkdir -p $BUILD_DIR/$TARGET_VENDOR_DIR
   cp -r $CACHE_DIR/$dir/* $BUILD_DIR/$TARGET_VENDOR_DIR &> /dev/null || true
+  mkdir -p /app/$TARGET_VENDOR_DIR
+  cp -r $CACHE_DIR/$dir/* /app/$TARGET_VENDOR_DIR &> /dev/null || true
 done
 
 # App directories
